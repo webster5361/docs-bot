@@ -9,10 +9,10 @@
   "author": "Odin",
   "license": "MIT",
   "dependencies": {
-    "chalk": "^1.1.3",
+    "chalk": "^2.0.1",
     "discord.js": "^11.1.0",
     "moment": "^2.18.1",
-    "ms": "^0.7.3",
+    "ms": "^2.0.0",
     "nodemon": "^1.11.0",
     "return-deep-diff": "^0.2.7"
   }
