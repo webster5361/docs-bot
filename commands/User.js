@@ -11,31 +11,31 @@ exports.run = (client, message, params) => {
         docChannel.send("`.avatar`\n```ini\nThe ID of the user's avatar.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=avatar");
         break;
       case "avatarURL":
-        docChannel.send("`.avatarURL`\n```ini\nA link to the user's avatar.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=avatarURL");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.avatarURL`\n```ini\nA link to the user's avatar.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=avatarURL");
         break;
       case "bot":
         docChannel.send("`.bot`\n```ini\nWhether or not the user is a bot..\nType:[boolean]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=bot");
         break;
       case "client":
-        docChannel.send("`.client`\n```ini\nThe client that created the instance of the user.\nType:[Object]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=client");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.client`\n```ini\nThe client that created the instance of the user.\nType:[Object]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=client");
         break;
       case "createdAt":
-        docChannel.send("`.createdAt`\n```ini\nThe time the user was created.\nType:[Date]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=createdAt");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.createdAt`\n```ini\nThe time the user was created.\nType:[Date]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=createdAt");
         break;
       case "createdTimestamp":
-        docChannel.send("`.createdTimestamp`\n```ini\nThe timestamp the user was created at.\nType:[number]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=createdTimestamp");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.createdTimestamp`\n```ini\nThe timestamp the user was created at.\nType:[number]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=createdTimestamp");
         break;
       case "defaultAvatarURL":
-        docChannel.send("`.defaultAvatarURL`\n```ini\nA link to the user's default avatar.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=defaultAvatarURL");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.defaultAvatarURL`\n```ini\nA link to the user's default avatar.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=defaultAvatarURL");
         break;
       case "discriminator":
         docChannel.send("`.discriminator`\n```ini\nA discriminator based on username for the user.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=discriminator");
         break;
       case "displayAvatarURL":
-        docChannel.send("`.displayAvatarURL`\n```ini\nA link to the user's avatar if they have one. Otherwise a link to their default avatar will be returned.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=displayAvatarURL");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.displayAvatarURL`\n```ini\nA link to the user's avatar if they have one. Otherwise a link to their default avatar will be returned.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=displayAvatarURL");
         break;
       case "dmChannel":
-        docChannel.send("`.dmChannel`\n```ini\nThe DM between the client's user and this user.\nType:[DMChannel]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=dmChannel");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.dmChannel`\n```ini\nThe DM between the client's user and this user.\nType:[DMChannel]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=dmChannel");
         break;
       case "id":
         docChannel.send("`.id`\n```ini\nThe ID of the user.\nType:[Snowflake]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=id");
@@ -47,13 +47,13 @@ exports.run = (client, message, params) => {
         docChannel.send("`.lastMessageID`\n```ini\nThe ID of the last message sent by the user, if one was sent.\nType:[Snowflake]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=lastMessageID");
         break;
       case "note":
-        docChannel.send("`.note`\n```ini\nThe note that is set for the user.\nType:[string]```\n```diff\n- This is only available when using a user account. -```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=note");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.note`\n```ini\nThe note that is set for the user.\nType:[string]```\n```diff\n- This is only available when using a user account. -```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=note");
         break;
       case "presence":
-        docChannel.send("`.presence`\n```ini\nThe presence of this user.\nType:[Presence]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=presence");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.presence`\n```ini\nThe presence of this user.\nType:[Presence]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=presence");
         break;
       case "tag":
-        docChannel.send("`.tag`\n```ini\nThe Discord \"tag\" for this user.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=tag");
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.tag`\n```ini\nThe Discord \"tag\" for this user.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=tag");
         break;
       case "username":
         docChannel.send("`.username`\n```ini\nThe username of the user.\nType:[string]```\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/User?scrollTo=username");
