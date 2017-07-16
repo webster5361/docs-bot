@@ -1,2 +1,3 @@
-# Tutorial-Bot
-This is the bot we're creating in the video series, each branch is an episode number.
+# DOCS-BOT
+
+This is a reference bot for Discord.js documentation. Currently we are only supporting the STABLE branch of docs.
