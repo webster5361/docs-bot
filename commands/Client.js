@@ -111,115 +111,127 @@ exports.run = (client, message, params) => {
 
       // Events
       case "channelCreate":
-        docChannel.send("");
+        docChannel.send("`channelCreate`\n```ini\nEmitted whenever a channel is created.```\n**Parameter:** `channel`\n**Type:** `Channel`\n**Description:** `The channel that was created`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=channelCreate");
         break;
       case "channelDelete":
-        docChannel.send("");
+        docChannel.send("`channelDelete`\n```ini\nEmitted whenever a channel is deleted.```\n**Parameter:** `channel`\n**Type:** `Channel`\n**Description:** `The channel that was deleted`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=channelDelete");
         break;
       case "channelPinsUpdate":
-        docChannel.send("");
+        docChannel.send("`channelPinsUpdate`\n```ini\nEmitted whenever the pins of a channel are updated. Due to the nature of the WebSocket event, not much information can be provided easily here - you need to manually check the pins yourself.```\n**Parameters:** `channel`\n**Type:** `Channel`\n**Description:** `The channel that the pins update occured in`\n\n**Parameter:** `time`\n**Type:** `Date`\n**Description:** `The time of the pins update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=channelPinsUpdate");
+        break;
+      case "channelUpdate":
+        docChannel.send("`channelUpdate`\n```ini\nEmitted whenever a channel is updated - e.g. name change, topic change.```\n\n**Parameter:** `oldChannel`\n**Type:** `Channel`\n**Description:** `The channel before the update`\n\n**Parameter:** `newChannel`\n**Type:** `Channel`\n**Description:** `The channel after the update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=channelUpdate");
         break;
       case "clientUserSettingsUpdate":
-        docChannel.send("");
+        docChannel.send("`clientUserSettingsUpdate`\n```ini\nEmitted when the client user\'s settings update.```\n\n**Parameter:** `clientUserSettings`\n**Type:** `ClientUserSettings`\n**Description:** `The new client user settings`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=clientUserSettingsUpdate");
         break;
       case "debug":
-        docChannel.send("");
+        docChannel.send("`debug`\n```ini\nEmitted for general debugging information.```\n\n**Parameter:** `info`\n**Type:** `string`\n**Description:** `The debug information`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=debug");
         break;
       case "disconnect":
-        docChannel.send("");
+        docChannel.send("`disconnect`\n```ini\nEmitted when the client\'s WebSocket disconnects and will no longer attempt to reconnect.```\n\n**Parameter:** `event`\n**Type:** `CloseEvent`\n**Description:** `The WebSocket close event`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=disconnect");
         break;
       case "emojiCreate":
-        docChannel.send("");
+        docChannel.send("`emojiCreate`\n```ini\nEmitted whenever a custom emoji is created in a guild.```\n\n**Parameter:** `emoji`\n**Type:** `Emoji`\n**Description:** `The emoji that was created`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=emojiCreate");
         break;
       case "emojiDelete":
-        docChannel.send("");
+        docChannel.send("`emojiDelete`\n```ini\nEmitted whenever a custom guild emoji is deleted.```\n\n**Parameter:** `emoji`\n**Type:** `Emoji`\n**Description:** `The emoji that was deleted`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=emojiDelete");
+        break;
+      case "emojiUpdate":
+        docChannel.send("`emojiUpdate`\n```ini\nEmitted whenever a custom guild emoji is update.```\n\n**Parameter:** `oldEmoji`\n**Type:** `Emoji`\n**Description:** `The old emoji`\n\n**Parameter:** `newEmoji`\n**Type:** `Emoji`\n**Description:** `The new emoji`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=emojiUpdate");
         break;
       case "guildBanAdd":
-        docChannel.send("");
+        docChannel.send("`guildBanAdd`\n```ini\nEmitted when a member is banned from a guild.```\n\n**Parameter:** `guild`\n**Type:** `Guild`\n**Description:** `The guild that the ban occurred in`\n\n**Parameter:** `user`\n**Type:** `User`\n**Description:** `The user that was banned`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildBanAdd");
         break;
       case "guildBanRemove":
-        docChannel.send("");
+        docChannel.send("`guildBanRemove`\n```ini\nEmitted whenever a member is unbanned from a guild.```\n\n**Parameter:** `guild`\n**Type:** `Guild`\n**Description:** `The guild that the unban occurred in`\n\n**Parameter:** `user`\n**Type:** `User`\n**Description:** `The user that was unbanned`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildBanRemove");
         break;
       case "guildCreate":
-        docChannel.send("");
+        docChannel.send("`guildCreate`\n```ini\nEmitted whenever the client joins a guild.```\n\n**Parameter:** `guild`\n**Type:** `Guild`\n**Description:** `The created guild`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildCreate");
         break;
       case "guildDelete":
-        docChannel.send("");
+        docChannel.send("`guildDelete`\n```ini\nEmitted whever a guild is deleted/left.```\n\n**Parameter:** `guild`\n**Type:** `Guild`\n**Description:** `The guild that was deleted`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildDelete");
         break;
       case "guildMemberAdd":
-        docChannel.send("");
+        docChannel.send("`guildMemberAdd`\n```ini\nEmitted whenever a user joins a guild.```\n\n**Parameter:** `member`\n**Type:** `GuildMember`\n**Description:** `The member that has joined a guild`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildMemberAdd");
         break;
-      case "guildMemeberAvailable":
-        docChannel.send("");
+      case "guildMemberAvailable":
+        docChannel.send("`guildMemberAvailable`\n```ini\nEmitted whenever a member becomes available in a large guild.```\n\n**Parameter:** `member`\n**Type:** `GuildMember`\n**Description:** `The member that became available`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildMemberAvailable");
         break;
       case "guildMemberRemove":
-        docChannel.send("");
+        docChannel.send("`guildMemberRemove`\n```ini\nEmitted whenever a member leaves a guild, or is kicked.```\n\n**Parameter:** `member`\n**Type:** `GuildMember`\n**Description:** `The member that has left/been kicked from the guild`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildMemberRemove");
         break;
       case "guildMembersChunk":
-        docChannel.send("");
+        docChannel.send("`guildMembersChunk`\n```ini\nEmitted whenever a chunk of guild members is received (all members come from the same guild).```\n\n**Parameter:** `members`\n**Type:** `Collection<Snowflake, GuildMember>`\n**Description:** `The members in the chunk`\n\n**Parameter:** `guild`\n**Type:** `Guild`\n**Description:** `The guild related to the member chunk`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildMembersChunk");
         break;
       case "guildMemberSpeaking":
-        docChannel.send("");
+        docChannel.send("`guildMemberSpeaing`\n```ini\nEmitted once a guild member starts/stops speaking```\n\n**Parameter:** `member`\n**Type:** `GuildMember`\n**Description:** `The member that started/stopped speaking`\n\n**Parameter:** `speaking`\n**Type:** `boolean`\n**Description:** `Whether or not the member is speaking`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildMemberSpeaking");
         break;
       case "guildMemberUpdate":
-        docChannel.send("");
+        docChannel.send("`guildMemberUpdate`\n```ini\nEmitted whenever a guild member changes - i.e. new role, removed role, nickname.```\n\n**Parameter:** `oldMember`\n**Type:** `GuildMember`\n**Description:** `The member before the update`\n\n**Parameter:** `newMember`\n**Type:** `GuildMember`\n**Description:** `The member after the update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildMemberUpdate");
+        break;
+      case "guildUnavailable":
+        docChannel.send("`guildUnavailale`\n```ini\nEmitted whenever a guild becomes unavailable, likely due to a server outage.```\n\n**Parameter:** `guild`\n**Type:** `Guild`\n**Description:** `The guild that has become unavailable`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildUnavailable");
+        break;
+      case "guildUpdate":
+        docChannel.send("`guildUpdate`\n```ini\nEmitted whenever a guild is updated - e.g. name change.```\n\n**Parameter:** `oldGuild`\n**Type:** `Guild`\n**Description:** `The guild before the update`\n\n**Parameter:** `newGuild`\n**Type:** `Guild`\n**Description:** `The guild after the update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guildUpdate");
         break;
       case "message":
-        docChannel.send("");
+        docChannel.send("`message`\n```ini\nEmitted whenever a message is created.```\n\n**Parameter:** `message`\n**Type:** `Message`\n**Description:** `The created message`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=message");
         break;
       case "messageDelete":
-        docChannel.send("");
+        docChannel.send("`messageDelete`\n```ini\nEmitted whenever a message is deleted.```\n\n**Parameter:** `message`\n**Type:** `Message`\n**Description:** `The deleted message`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=messageDelete");
         break;
       case "messageDeleteBulk":
-        docChannel.send("");
+        docChannel.send("`messageDeleteBulk`\n```ini\nEmitted whenever messages are deleted in bulk.```\n\n**Parameter:** `messages`\n**Type:** `Collection<Snowflake, Message`\n**Description:** `The deleted messages, mapped by their ID`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=messageDeleteBulk");
         break;
       case "messageReactionAdd":
-        docChannel.send("");
+        docChannel.send("`messageReactionAdd`\n```ini\nEmitted whenever a reaction is added to a message.```\n\n**Parameter:** `messageReaction`\n**Type:** `MessageReaction`\n**Description:** `The reaction object`\n\n**Parameter:** `user`\n**Type:** `User`\n**Description:** `The user that applied the emoji or reaction emoji`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=messageReactionAdd");
         break;
       case "messageReactionRemove":
-        docChannel.send("");
+        docChannel.send("`messageReactionRemove`\n```ini\nEmitted whenever a reaction is removed from a message.```\n\n**Parameter:** `messageReaction`\n**Type:** `MessageReaction`\n**Description:** `The reaction object`\n\n**Parameter:** `user`\n**Type:** `User`\n**Description:** `The user that removed the emoji or reaction emoji`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=messageReactionRemove");
         break;
       case "messageReactionRemoveAll":
-        docChannel.send("");
+        docChannel.send("`messageReactionRemoveAll`\n```ini\nEmitted whenever all reactions are removed from a message```\n\n**Parameter:** `message`\n**Type:** `Message`\n**Description:** `The message the reactions were removed from`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=messageReactionRemoveAll");
         break;
       case "messageUpdate":
-        docChannel.send("");
+        docChannel.send("`messageUpdate`\n```ini\nEmitted whenever a message is updated - e.g. embed or content change.```\n\n**Parameter:** `oldMessage`\n**Type:** `Message`\n**Description:** `The message before the update`\n\n**Parameter:** `newMessage`\n**Type:** `Message`\n**Description:** `The message after the update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=messageUpdate");
         break;
       case "presenceUpdate":
-        docChannel.send("");
+        docChannel.send("`presenceUpdate`\n```ini\nEmitted whever a guild member\'s presence changes, or they change one of their details.```\n\n**Parameter:** `oldMember`\n**Type:** `GuildMember`\n**Description:** `The member before the presence update`\n\n**Parameter:** `newMember`\n**Type:** `GuildMember`\n**Description:** `The member after the presence update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=presenceUpdate");
         break;
       case "reconnecting":
-        docChannel.send("");
+        docChannel.send("`reconnecting`\n```ini\nEmitted whever the client tries to reconnect to the WebSocket.```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=reconnecting");
         break;
       case "resume":
-        docChannel.send("");
+        docChannel.send("`resume`\n```ini\nEmitted whenever a WebSocket resumes```\n\n**Parameter:** `replayed`\n**Type:** `number`\n**Description:** `The number of events that were replayed`\n\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=resume");
         break;
       case "roleCreate":
-        docChannel.send("");
+        docChannel.send("`roleCreate`\n```ini\nEmitted whenever a role is created.```\n\n**Parameter:** `role`\n**Type:** `Role`\n**Description:** `The role that was created`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=roleCreate");
         break;
       case "roleDelete":
-        docChannel.send("");
+        docChannel.send("`roleDelete`\n```ini\nEmitted whenever a guild role is deleted.```\n\n**Parameter:** `role`\n**Type:** `Role`\n**Description:** `The role that was deleted`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=roleDelete");
         break;
       case "roleUpdate":
-        docChannel.send("");
+        docChannel.send("`roleUpdate`\n```ini\nEmitted whenever a guild role is updated.```\n\n**Parameter:** `oldRole`\n**Type:** `Role`\n**Description:** `The role before the update`\n\n**Parameter:** `newRole`\n**Type:** `Role`\n**Description:** `The role after the update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=roleUpdate");
         break;
       case "typingStart":
-        docChannel.send("");
+        docChannel.send("`typingStart`\n```ini\nEmitted whenever a user starts typing in a channel.```\n\n**Parameter:** `channel`\n**Type:** `Channel`\n**Description:** `The channel the user started typing in`\n\n**Parameter:** `user`\n**Type:** `User`\n**Description:** `The user that started typing`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=typingStart");
         break;
       case "typingStop":
-        docChannel.send("");
+        docChannel.send("`typingStop`\n```ini\nEmitted whenever a user stops typing in a channel.```\n\n**Parameter:** `channel`\n**Type:** `Channel`\n**Description:** `The channel the user stopped typing in`\n\n**Parameter:** `user`\n**Type:** `User`\n**Description:** `The user that stopped typing`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=typingStop");
         break;
       case "userNoteUpdate":
-        docChannel.send("");
+        docChannel.send("`userNoteUpdate`\n```ini\nEmitted whenever a note is updated.```\n\n**Parameter:** `user`\n**Type:** `User`\n**Description:** `The user the note belongs to`\n\n**Parameter:** `oldNote`\n**Type:** `string`\n**Description:** `The note content before the update`\n\n**Parameter:** `newNote`\n**Type:** `string`\n**Description:** `The note content after the update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=userNoteUpdate");
         break;
       case "userUpdate":
-        docChannel.send("");
+        docChannel.send("`userUpdate`\n```ini\nEmitted whenever a user\'s details (e.g. username) are changed.```\n\n**Parameter:** `oldUser`\n**Type:** `User`\n**Description:** `The user before the update`\n\n**Parameter:** `newUser`\n**Type:** `User`\n**Description:** `The user after the update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=userUpdate");
         break;
       case "voiceStateUpdate":
-        docChannel.send("");
+        docChannel.send("`voiceStateUpdate`\n```ini\nEmitted whenever a user changes voice state - e.g. joins/leaves a channel, mutes/unmutes.```\n\n**Parameter:** `oldMember`\n**Type:** `GuildMember`\n**Description:** `The member before the voice state update`\n\n**Parameter:** `newMember`\n**Type:** `GuildMember`\n**Description:** `The member after the voice state update`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=voiceStateUpdate");
         break;
       case "warn":
-        docChannel.send("");
+        docChannel.send("`warn`\n```ini\nEmitted for general warnings```\n\n**Parameter:** `info`\n**Type:** `string`\n**Description:** `The warning`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=warn");
         break;
 
       // Default
