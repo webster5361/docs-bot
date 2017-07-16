@@ -8,16 +8,21 @@ exports.run = (client, message, params) => {
     switch(`${params}`) {
       // Properties
       case "name":
+        docChannel.send("`.name`\n```ini\nThe name of the game being played.\nType: [ string ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Game?scrollTo=name");
         break;
       case "streaming":
+        docChannel.send("```ini\n[ READ-ONLY ]```\n`.streaming`\n```ini\nWhether or not the game is being streamed.\nType: [ boolean ]```\n**Doc string:** https://discord.js.org/#/docs/main/stable/class/Game?scrollTo=streaming");
         break;
       case "type":
+        docChannel.send("`.type`\n```ini\nThe type of the game status.\nType: [ number ]```\n**Doc string:** https://discord.js.org/#/docs/main/stable/class/Game?scrollTo=type");
         break;
       case "url":
+        docChannel.send("`.url`\n```ini\nIf the game is being streamed, a link to the stream.\nType: [ string ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Game?scrollTo=url")
         break;
 
       // Methods
       case "equals":
+        docChannel.send("`.equals`\n```ini\nWhether this game is equal to another game.\nReturns: [ boolean ]```\n\n**Parameter:** `game`\n**Type:** `Game`\n**Description:** `The game to compare with`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Game?scrollTo=equals");
         break;
 
       // Events

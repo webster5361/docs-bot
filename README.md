@@ -15,14 +15,14 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 - DiscordAPIError
 - DMChannel
 - Emoji
-- Game
-- GroupDMChannel 
+- GroupDMChannel
 
 ## COMPLETED -- Not Verified
 - Client
 - ClientUser
 - Channel
 - EvaluatedPermissions
+- Game
 - User
 
 ## COMPLETED -- Verified
