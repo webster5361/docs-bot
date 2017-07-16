@@ -11,11 +11,18 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 ## IN PROGRESS
 - ClientUserSettings
 - Collection
+- Collector
+- DiscordAPIError
+- DMChannel
+- Emoji
+- Game
+- GroupDMChannel 
 
 ## COMPLETED -- Not Verified
 - Client
 - ClientUser
 - Channel
+- EvaluatedPermissions
 - User
 
 ## COMPLETED -- Verified

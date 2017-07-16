@@ -116,6 +116,7 @@ exports.run = (client, message, params) => {
         break;
 
       // Events
+
       // Default
       default:
         docChannel.send("__User__\nRepresents a user on Discord.\n\n**Constructor** none\n\n**Properties**\n`client`, `id`, `username`, `discriminator`, `avatar`, `bot`, `lastMessageID`, `lastMessage`, `createdTimestamp`, `createdAt`, `presence`, `avatarURL`, `displayAvatarURL`, `tag`, `note`, `dmChannel`\n\n**Methods**\n`typingIn()`, `typingSinceIn()`, `typingDurationIn()`, `createDM()`, `deleteDM()`, `addFriend()`, `removeFriend()`, `block()`, `unblock()`, `fetchProfile()`, `setNote()`, `equals()`, `toString()`, `send()`, `sendMessage()`, `sendEmbed()`, `sendFile()`, `sendCode()`\n\n**Events**\nnone\n\n**Docs link:** http://discord.js.org/#!/docs/tag/stable/class/User");
@@ -127,12 +128,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [''],
+  aliases: ['user'],
   permLevel: 0
 };
 
 exports.help = {
   name: 'User',
-  description: 'Displays all the available about the User class',
+  description: 'Displays all the available info about the User class',
   usage: 'User'
 };

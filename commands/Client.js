@@ -245,12 +245,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [''],
+  aliases: ['client'],
   permLevel: 0
 };
 
 exports.help = {
   name: 'Client',
-  description: 'Displays all the available about the Client class',
-  usage: 'Client'
+  description: 'Displays all the available info about the Client class',
+  usage: 'Client [arg]'
 };

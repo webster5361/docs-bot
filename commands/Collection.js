@@ -2,22 +2,79 @@ const settings = require('../settings.json');
 exports.run = (client, message, params) => {
   if (!params[0]) {
     const docChannel = message.guild.channels.find("name", "documentation");
-    //console.log(`${docChannel.id}`);
-    docChannel.send("__User__\nRepresents a user on Discord.\n\n**Constructor** none\n\n**Properties**\n`client`, `id`, `username`, `discriminator`, `avatar`, `bot`, `lastMessageID`, `lastMessage`, `createdTimestamp`, `createdAt`, `presence`, `avatarURL`, `displayAvatarURL`, `tag`, `note`, `dmChannel`\n\n**Methods**\n`typingIn()`, `typingSinceIn()`, `typingDurationIn()`, `createDM()`, `deleteDM()`, `addFriend()`, `removeFriend()`, `block()`, `unblock()`, `fetchProfile()`, `setNote()`, `equals()`, `toString()`, `send()`, `sendMessage()`, `sendEmbed()`, `sendFile()`, `sendCode()`\n\n**Events**\nnone\n\n**Docs link:** http://discord.js.org/#!/docs/tag/stable/class/User");
+    docChannel.send("__Collection__\nA Map with additional utility methods. This is used through discord.js rather than Arrays for anything that has an ID, for significantly improved performance and ease-of-use.\n\n**Constructor** none\n\n**Properties**\n`none`\n\n**Methods**\n`array()`, `clone()`, `concat()`, `deleteAll()`, `equals()`, `every()`, `exists()`, `filter()`, `filterArray()`, `find()`, `findAll()`, `findKey()`, `first()`, `firstKey()`, `keyArray()`, `last()`, `lastKey()`, `map()`, `random()`, `randomKey()`, `reduce()`, `some()`, `sort()`\n\n**Events**\nnone\n\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/Collection");
   } else {
-    console.log("coming soon");
+    const docChannel = message.guild.channels.find("name", "documentation");
+    switch(`${params}`) {
+      // Properties
+
+      // Methods
+      case "array":
+        break;
+      case "clone":
+        break;
+      case "concat":
+        break;
+      case "deleteAll":
+        break;
+      case "equals":
+        break;
+      case "every":
+        break;
+      case "exists":
+        break;
+      case "filter":
+        break;
+      case "filterArray":
+        break;
+      case "find":
+        break;
+      case "findAll":
+        break;
+      case "findKey":
+        break;
+      case "first":
+        break;
+      case "firstKey":
+        break;
+      case "keyArray":
+        break;
+      case "last":
+        break;
+      case "lastKey":
+        break;
+      case "map":
+        break;
+      case "random":
+        break;
+      case "randomKey":
+        break;
+      case "reduce":
+        break;
+      case "some":
+        break;
+      case "sort":
+        break;
+
+      // Events
+
+      // Default
+      default:
+        docChannel.send("__Collection__\nA Map with additional utility methods. This is used through discord.js rather than Arrays for anything that has an ID, for significantly improved performance and ease-of-use.\n\n**Constructor** none\n\n**Properties**\n`none`\n\n**Methods**\n`array()`, `clone()`, `concat()`, `deleteAll()`, `equals()`, `every()`, `exists()`, `filter()`, `filterArray()`, `find()`, `findAll()`, `findKey()`, `first()`, `firstKey()`, `keyArray()`, `last()`, `lastKey()`, `map()`, `random()`, `randomKey()`, `reduce()`, `some()`, `sort()`\n\n**Events**\nnone\n\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/Collection");
+        break;
+    }
   }
 };
 
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [''],
+  aliases: ['collection'],
   permLevel: 0
 };
 
 exports.help = {
   name: 'Collection',
   description: 'Displays all the available information about the Collection class',
-  usage: 'User'
+  usage: 'Collection [arg]'
 };

@@ -2,7 +2,6 @@ const settings = require('../settings.json');
 exports.run = (client, message, params) => {
   if (!params[0]) {
     const docChannel = message.guild.channels.find("name", "documentation");
-    //console.log(`${docChannel.id}`);
     docChannel.send("__ClientUser__\nRepresents the logged in client\'s Discord user.\n\n**Constructor** none\n\n**Properties**\n`avatar`, `avatarURL`, `blocked`, `bot`, `client`, `createdAt`, `createdTimestamp`, `defaultAvatarURL`, `discriminator`, `displayAvatarURL`, `dmChannel`, `email`, `friends`, `id`, `lastMessage`, `lastMessageID`, `mfaEnabled`, `mobile`, `note`, `notes`, `premium`, `presence`, `tag`, `username`, `verified`\n\n**Methods**\n`acceptInvite()`, `addFriend()`, `block()`, `createDM()`, `createGroupDM()`, `createGuild()`, `deleteDM()`, `equals()`, `fetchMentions()`, `removeFriend()`, `send()`, `sendCode()`, `sendEmbed()`, `sendFile()`, `sendMessage()`, `setAFK()`, `setAvatar()`, `setEmail()`, `setGame()`, `setNote()`, `setPassword()`, `setPresence()`, `setStatus()`, `setUsername()`, `toString()`, `typingDurationIn()`, `typingIn()`, `typingSinceIn()`, `unblock()`\n\n**Events**\nnone\n\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/ClientUser");
   } else {
     const docChannel = message.guild.channels.find("name", "documentation");
@@ -177,6 +176,7 @@ exports.run = (client, message, params) => {
         break;
 
       // Events
+
       // Default
       default:
         docChannel.send("__ClientUser__\nRepresents the logged in client\'s Discord user.\n\n**Constructor** none\n\n**Properties**\n`avatar`, `avatarURL`, `blocked`, `bot`, `client`, `createdAt`, `createdTimestamp`, `defaultAvatarURL`, `discriminator`, `displayAvatarURL`, `dmChannel`, `email`, `friends`, `id`, `lastMessage`, `lastMessageID`, `mfaEnabled`, `mobile`, `note`, `notes`, `premium`, `presence`, `tag`, `username`, `verified`\n\n**Methods**\n`acceptInvite()`, `addFriend()`, `block()`, `createDM()`, `createGroupDM()`, `createGuild()`, `deleteDM()`, `equals()`, `fetchMentions()`, `removeFriend()`, `send()`, `sendCode()`, `sendEmbed()`, `sendFile()`, `sendMessage()`, `setAFK()`, `setAvatar()`, `setEmail()`, `setGame()`, `setNote()`, `setPassword()`, `setPresence()`, `setStatus()`, `setUsername()`, `toString()`, `typingDurationIn()`, `typingIn()`, `typingSinceIn()`, `unblock()`\n\n**Events**\nnone\n\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/ClientUser");
@@ -188,12 +188,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [''],
+  aliases: ['clientuser', 'clientUser'],
   permLevel: 0
 };
 
 exports.help = {
   name: 'ClientUser',
   description: 'Displays all the available information about the ClientUser class',
-  usage: 'User'
+  usage: 'ClientUser [arg]'
 };

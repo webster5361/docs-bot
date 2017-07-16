@@ -42,12 +42,12 @@ exports.run = (client, message, params) => {
 exports.conf = {
   enabled: true,
   guildOnly: false,
-  aliases: [''],
+  aliases: ['channel'],
   permLevel: 0
 };
 
 exports.help = {
   name: 'Channel',
   description: 'Displays all the available info about the Channel class',
-  usage: 'Channel'
+  usage: 'Channel [arg]'
 };
