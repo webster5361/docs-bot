@@ -10,7 +10,6 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 
 ## IN PROGRESS
 - Collection
-- DiscordAPIError
 - DMChannel
 - Emoji
 - GroupDMChannel
@@ -21,6 +20,7 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 - ClientUserSettings
 - Channel
 - Collector
+- DiscordAPIError
 - EvaluatedPermissions
 - Game
 - User
