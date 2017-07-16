@@ -2,9 +2,228 @@ const settings = require('../settings.json');
 exports.run = (client, message, params) => {
   if (!params[0]) {
     const docChannel = message.guild.channels.find("name", "documentation");
-    docChannel.send("");
+    docChannel.send("__Client__\nThe main hub for interacting with the Discord API, and the starting point for any bot.\n\n**Constructor** `new Discord.Client(options)`\n\n**Parameter:**`options`\n**Type:** `ClientOptions`\n**Optional:** TRUE\n**Default:** `none`\n**Description:** `Options for the client`\n\n**Properties**\n`broadcasts`, `browser`, `channels`, `emojis`, `guilds`, `options`, `ping`, `pings`, `presences`, `readyAt`, `readyTimestamp`, `shard`, `status`, `token`, `uptime`, `user`, `users`, `voiceConnections`\n\n**Methods**\n`clearInterval()`, `createVoiceBroadcast()`, `destroy()`, `fetchApplication()`, `fetchInvite()`, `fetchUser()`, `fetchVoiceRegions()`, `fetchWebhook()`, `generateInvite()`, `login()`, `setInterval()`, `setTimeout()`, `sweepMessages()`, `syncGuilds()`\n\n**Events**\n`channelCreate`, `channelDelete`, `channelPinsUpdate`, `clientUserSettingsUpdate`, `debug`, `disconnect`, `emojiCreate`, `emojiDelete`, `emojiUpdate`, `guildBanAdd`, `guildBanRemove`, `guildCreate`, `guildDelete`, `guildMemberAdd`, `guildMemberAvailable`, `guildMemberRemove`, `guildMembersChunk`, `guildMemberSpeaking`, `guildMemberUpdate`, `guildUnavailable`, `guildUpdate`, `message`, `messageDelete`, `messageDeleteBulk`, `messageReactionAdd`, `messageReactionRemove`, `messageReactionRemoveAll`, `messageUpdate`, `presenceUpdate`, `reconnecting`, `resume`, `roleCreate`, `roleDelete`, `roleUpdate`, `typingStart`, `typingStop`, `userNoteUpdate`, `userUpdate`, `voiceStateUpdate`, `warn`\n\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/Client");
   } else {
-    console.log("coming soon");
+    const docChannel = message.guild.channels.find("name", "documentation");
+    switch(`${params}`) {
+      // Properties
+      case "broadcasts":
+        docChannel.send("`.broadcasts`\n```ini\nActive voice broadcasts that have been created.\nType: [ Array<VoiceBroadcast> ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=broadcasts");
+        break;
+      case "browser":
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.browser`\n```ini\nWhether the client is in a browser environment.\nType: [ boolean ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=browser");
+        break;
+      case "channels":
+        docChannel.send("`.channels`\n```ini\nAll of the Channels that the client is currently handling, mapped by their IDs - as long as sharding isn\'t being used, this will be every channel in every guild, and all DM channels.\nType: [ Collection<Snowflake, Channel> ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=channels")
+        break;
+      case "emojis":
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.emojis`\n```ini\nAll custom emojis that the client has access to, mapped by their IDs.\nType: [ Collection<Snowflake, Guild> ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=emojis");
+        break;
+      case "guilds":
+        docChannel.send("`.guilds`\n```ini\nAll of the guilds the client is currently handling, mapped by their IDs - as long as sharding isn't being used, this will be every guild the bot is a member of.\nType: [ Collection<Snoflake, Guild> ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=guilds");
+        break;
+      case "options":
+        docChannel.send("`.options`\n```ini\nThe options the client was instantiated with.\nType: [ ClientOptions ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=options");
+        break;
+      case "ping":
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.ping`\n```ini\nAverage heartbeat ping of the websocket, obtained by averaging the Client#pings property.\nType: [ number ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=ping");
+        break;
+      case "pings":
+        docChannel.send("`.pings`\n```ini\nPrevious heartbeat pings of the websocket (most recent first, limited to three elements).\nType: [ Array<number> ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=pings");
+        break;
+      case "presences":
+        docChannel.send("`.presences`\n```ini\nPresences that have been received for the client user\'s friends, mapped by user IDs.\nType: [ Collection<Snowflake, Presence ]```\n```diff\n- This is only available when using a user account. -```\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=presences")
+        break;
+      case "readyAt":
+        docChannel.send("`.readyAt`\n```ini\nTime at which the client was last regarded as being in the READY state (each time the client disconnects and successfully reconnects, this will be overwritten).\nType: [ Date ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=readtAt");
+        break;
+      case "readyTimestamp":
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.readyTimestamp`\n```ini\nTimestamp of the time the client was last READY at.\nType: [ number ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=readyTimestamp");
+        break;
+      case "shard":
+        docChannel.send("`.shard`\n```ini\nThe shard helpers for the client (only if the process was spawned as a child, such as from a ShardingManager).\nType: [ ShardClientUtil ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=shard");
+        break;
+      case "status":
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.status`\n```ini\nCurrent status of the client\'s connection to Discord.\nType: [ number ]```\n**Discord link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=status");
+        break;
+      case "token":
+        docChannel.send("`.token`\n```ini\nAuthorization token for the logged in user/bot.\nType: [ string ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=token");
+        break;
+      case "uptime":
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.uptime`\n```ini\nHow long it has been since the client last entered the READY state.\nType: [ number ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=uptime");
+        break;
+      case "user":
+        docChannel.send("`.user`\n```ini\nUser that the client is logged in as.\nType: [ ClientUser ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=user");
+        break;
+      case "users":
+        docChannel.send("`.users`\n```ini\nAll of the User objects that have been cached at any point, maped by their IDs.\nType: [ Collection<Snowflake, User> ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=users");
+        break;
+      case "voiceConnections":
+        docChannel.send("```ini\n[ READ ONLY ]```\n`.voiceConnections`\n```ini\nAll active voice connections that have been established, mapped by channel ID.\nType: [ Collection<Snowflake, VoiceConnection> ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=voiceConnections");
+        break;
+
+      // Methods
+      case "clearInterval":
+        docChannel.send("");
+        break;
+      case "createdVoiceBroadcast":
+        docChannel.send("");
+        break;
+      case "destroy":
+        docChannel.send("");
+        break;
+      case "fetchApplication":
+        docChannel.send("");
+        break;
+      case "fetchInvite":
+        docChannel.send("");
+        break;
+      case "fetchUser":
+        docChannel.send("");
+        break;
+      case "fetchVoiceRegions":
+        docChannel.send("");
+        break;
+      case "fetchWebhook":
+        docChannel.send("");
+        break;
+      case "generateInvite":
+        docChannel.send("");
+        break;
+      case "login":
+        docChannel.send("");
+        break;
+      case "setInterval":
+        docChannel.send("");
+        break;
+      case "setTimeout":
+        docChannel.send("");
+        break;
+      case "sweepMessages":
+        docChannel.send("");
+        break;
+      case "syncGuilds":
+        docChannel.send("");
+        break;
+
+      // Events
+      case "channelCreate":
+        docChannel.send("");
+        break;
+      case "channelDelete":
+        docChannel.send("");
+        break;
+      case "channelPinsUpdate":
+        docChannel.send("");
+        break;
+      case "clientUserSettingsUpdate":
+        docChannel.send("");
+        break;
+      case "debug":
+        docChannel.send("");
+        break;
+      case "disconnect":
+        docChannel.send("");
+        break;
+      case "emojiCreate":
+        docChannel.send("");
+        break;
+      case "emojiDelete":
+        docChannel.send("");
+        break;
+      case "guildBanAdd":
+        docChannel.send("");
+        break;
+      case "guildBanRemove":
+        docChannel.send("");
+        break;
+      case "guildCreate":
+        docChannel.send("");
+        break;
+      case "guildDelete":
+        docChannel.send("");
+        break;
+      case "guildMemberAdd":
+        docChannel.send("");
+        break;
+      case "guildMemeberAvailable":
+        docChannel.send("");
+        break;
+      case "guildMemberRemove":
+        docChannel.send("");
+        break;
+      case "guildMembersChunk":
+        docChannel.send("");
+        break;
+      case "guildMemberSpeaking":
+        docChannel.send("");
+        break;
+      case "guildMemberUpdate":
+        docChannel.send("");
+        break;
+      case "message":
+        docChannel.send("");
+        break;
+      case "messageDelete":
+        docChannel.send("");
+        break;
+      case "messageDeleteBulk":
+        docChannel.send("");
+        break;
+      case "messageReactionAdd":
+        docChannel.send("");
+        break;
+      case "messageReactionRemove":
+        docChannel.send("");
+        break;
+      case "messageReactionRemoveAll":
+        docChannel.send("");
+        break;
+      case "messageUpdate":
+        docChannel.send("");
+        break;
+      case "presenceUpdate":
+        docChannel.send("");
+        break;
+      case "reconnecting":
+        docChannel.send("");
+        break;
+      case "resume":
+        docChannel.send("");
+        break;
+      case "roleCreate":
+        docChannel.send("");
+        break;
+      case "roleDelete":
+        docChannel.send("");
+        break;
+      case "roleUpdate":
+        docChannel.send("");
+        break;
+      case "typingStart":
+        docChannel.send("");
+        break;
+      case "typingStop":
+        docChannel.send("");
+        break;
+      case "userNoteUpdate":
+        docChannel.send("");
+        break;
+      case "userUpdate":
+        docChannel.send("");
+        break;
+      case "voiceStateUpdate":
+        docChannel.send("");
+        break;
+      case "warn":
+        docChannel.send("");
+        break;
+
+      // Default
+      default:
+        docChannel.send("__Client__\nThe main hub for interacting with the Discord API, and the starting point for any bot.\n\n**Constructor** `new Discord.Client(options)`\n\n**Parameter:**`options`\n**Type:** `ClientOptions`\n**Optional:** TRUE\n**Default:** `none`\n**Description:** `Options for the client`\n\n**Properties**\n`broadcasts`, `browser`, `channels`, `emojis`, `guilds`, `options`, `ping`, `pings`, `presences`, `readyAt`, `readyTimestamp`, `shard`, `status`, `token`, `uptime`, `user`, `users`, `voiceConnections`\n\n**Methods**\n`clearInterval()`, `createVoiceBroadcast()`, `destroy()`, `fetchApplication()`, `fetchInvite()`, `fetchUser()`, `fetchVoiceRegions()`, `fetchWebhook()`, `generateInvite()`, `login()`, `setInterval()`, `setTimeout()`, `sweepMessages()`, `syncGuilds()`\n\n**Events**\n`channelCreate`, `channelDelete`, `channelPinsUpdate`, `clientUserSettingsUpdate`, `debug`, `disconnect`, `emojiCreate`, `emojiDelete`, `emojiUpdate`, `guildBanAdd`, `guildBanRemove`, `guildCreate`, `guildDelete`, `guildMemberAdd`, `guildMemberAvailable`, `guildMemberRemove`, `guildMembersChunk`, `guildMemberSpeaking`, `guildMemberUpdate`, `guildUnavailable`, `guildUpdate`, `message`, `messageDelete`, `messageDeleteBulk`, `messageReactionAdd`, `messageReactionRemove`, `messageReactionRemoveAll`, `messageUpdate`, `presenceUpdate`, `reconnecting`, `resume`, `roleCreate`, `roleDelete`, `roleUpdate`, `typingStart`, `typingStop`, `userNoteUpdate`, `userUpdate`, `voiceStateUpdate`, `warn`\n\n**Docs link:** https://discord.js.org/#/docs/main/stable/class/Client");
+        break;
+    }
   }
 };
 
