@@ -8,7 +8,15 @@
 
 This is a reference bot for Discord.js documentation. Currently we are only supporting the STABLE branch of docs.
 
+## IN PROGRESS
+- ClientUser
+- ClientUserSettings
+- Collection
+
 ## COMPLETED -- Not Verified
 - Client
 - Channel
 - User
+
+## COMPLETED -- Verified
+-
