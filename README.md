@@ -11,7 +11,6 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 ## IN PROGRESS
 - Collection
 - DMChannel
-- Emoji
 - GroupDMChannel
 
 ## COMPLETED -- Not Verified
@@ -21,6 +20,7 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 - Channel
 - Collector
 - DiscordAPIError
+- Emoji
 - EvaluatedPermissions
 - Game
 - User
