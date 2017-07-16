@@ -17,7 +17,7 @@ exports.conf = {
 };
 
 exports.help = {
-  name: 'User',
-  description: 'Displays all the available about the User class',
+  name: 'Collection',
+  description: 'Displays all the available information about the Collection class',
   usage: 'User'
 };
