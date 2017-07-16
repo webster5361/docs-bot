@@ -9,9 +9,7 @@
 This is a reference bot for Discord.js documentation. Currently we are only supporting the STABLE branch of docs.
 
 ## IN PROGRESS
-- ClientUserSettings
 - Collection
-- Collector
 - DiscordAPIError
 - DMChannel
 - Emoji
@@ -20,7 +18,9 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 ## COMPLETED -- Not Verified
 - Client
 - ClientUser
+- ClientUserSettings
 - Channel
+- Collector
 - EvaluatedPermissions
 - Game
 - User
