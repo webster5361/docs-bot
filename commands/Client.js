@@ -64,46 +64,49 @@ exports.run = (client, message, params) => {
 
       // Methods
       case "clearInterval":
-        docChannel.send("");
+        docChannel.send("`.clearInterval(interval)`\n```ini\nClears an interval.\nReturns: [ void ]```\n**Parameter:** `interval`\n**Type:** `Timeout`\n**Description:** `Interval to cancel`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=clearInterval");
         break;
-      case "createdVoiceBroadcast":
-        docChannel.send("");
+      case "clearTimeout":
+        docChannel.send("`.clearTimeout(timeout)`\n```ini\nClears a timeout.\nReturns: [ void ]```\n**Parameter:** `timeout`\n**Type:** `Timeout`\n**Description:** `Timeout to cancel`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=clearTimeout");
+        break;
+      case "createVoiceBroadcast":
+        docChannel.send("`.createVoiceBroadcast()`\n```ini\nCreates a voice broadcast.\nReturns: [ VoiceBroadcast ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=createVoiceBroadcast");
         break;
       case "destroy":
-        docChannel.send("");
+        docChannel.send("`.destroy()`\n```ini\nLogs out, terminates the connection to Discord, and destroys the client.\nReturns: [ Promise ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=destroy");
         break;
       case "fetchApplication":
-        docChannel.send("");
+        docChannel.send("`.fetchApplication([id])`\n```ini\nObtains the OAuth Application of the bot from Discord.\nReturns: [ Promise<OAuth2Application> ]```\n**Parameter:** `id`\n**Type:** `Snowflake`\n**Optional:** `TRUE`\n**Default:** `\'@me\'`\n**Description:** `ID of application to fetch`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=fetchApplication");
         break;
       case "fetchInvite":
-        docChannel.send("");
+        docChannel.send("`.fetchInvite(invite)`\n```ini\nObtains an invite from Discord.\nReturns: [ Promise<Invite> ]```\n**Parameter:** `invite`\n**Type:** `InviteResolvable`\n**Description:** `Invite code or URL`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=fetchInvite");
         break;
       case "fetchUser":
-        docChannel.send("");
+        docChannel.send("`.fetchUser(id, [cache])`\n```ini\nObtains a user from Discord, or the user cache if it's already available.\nReturns: [ Promise<User> ]```\n**Parameter:** `id`\n**Type:** `Snowflake`\n**Optional:** `FALSE`\n**Default:** `none`\n**Description:** `ID of the user`\n\n**Parameter:** `cache`\n**Type:** `boolean`\n**Optional:** `TRUE`\n**Default:** `true`\n**Description:** `Whether to cache the new user object if it isn't already.`\n\n```diff\n- This is only available when using a bot account. -```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=fetchUser");
         break;
       case "fetchVoiceRegions":
-        docChannel.send("");
+        docChannel.send("`.fetchVoiceRegions()`\n```ini\nObtains the available voice regions from Discord.\nReturns: [ Collection<string, VoiceRegion ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=fetchVoiceRegions");
         break;
       case "fetchWebhook":
-        docChannel.send("");
+        docChannel.send("`.fetchWebhook(id, [token])`\n```ini\nObtains a webhook from Discord.\nReturns: [ Promise<Webhook> ]```\n**Parameter:** `id`\n**Type:** `Snowflake`\n**Optional:** `FALSE`\n**Default:** `none`\n**Description:** `ID of the webhook`\n\n**Parameter:** `token`\n**Type:** `string`\n**Optional:** `TRUE`\n**Default:** `none`\n**Description:** `Token for the webhook`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=fetchWebhook");
         break;
       case "generateInvite":
-        docChannel.send("");
+        docChannel.send("`.generateInvite([permissions])`\n```ini\nGenerates a link that can be used to invite the bot to a guild.\nReturns: [ Promise<string> ]```\n**Parameter:** `permissions`\n**Type:** `Array<PermissionResolvable> or number`\n**Optional:** `TRUE`\n**Default:** `none`\n**Description:** `Permissions to request`\n\n```diff\n- This is only available when using a bot account. -```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=generateInvite");
         break;
       case "login":
-        docChannel.send("");
+        docChannel.send("`.login(token)`\n```ini\nLogs the client in, establishing a websocket connection to Discord.\nReturns: [ Promise<string> ]\nToken of the account used.```\n**Parameter:** `token`\n**Type:** `string`\n**Description:** `Token of the account to log in with.`\n```ini\n[ Both both and regular user accounts are supported, but it is highly recommended to use a bot account whenever possible. User accounts are subject to harsher ratelimits and other restrictions that don\'t apply to bot accounts. Bot accounts also have access to many features that user accounts cannot utilise. User accounts that are found to be abusing/overusing the API will be banned, locking you out of Discord entirely. ]```\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=login\n\n**Examples:**\n```js\nclient.login(\'my token\');```");
         break;
       case "setInterval":
-        docChannel.send("");
+        docChannel.send("`.setInterval(fn, delay, ...args)`\n```ini\nSets an interval that will be automatically cancelled if the client is destroyed.\nReturns: [ Timeout ]```\n**Parameter:** `fn`\n**Type:** `Function`\n**Description:** `Function to execute`\n\n**Parameter:** `delay`\n**Type:** `number`\n**Description:** `Time to wait before executing (in milliseconds)`\n\n**Parameter:** `args`\n**Type:** `...*`\n**Description:** `Arguments for the function.`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=setInterval");
         break;
       case "setTimeout":
-        docChannel.send("");
+        docChannel.send("`.setTimeout(fn, delay, ...args)`\n```ini\nSets a timeout that will be automatically cancelled if the client is destroyed.\nReturns: [ Timeout ]```\n**Parameter:** `fn`\n**Type:** `Function`\n**Description:** `Function to execute`\n\n**Parameter:** `delay`\n**Type:** `number`\n**Description:** `Time to wait before executing (in milliseconds)`\n\n**Parameter:** `args`\n**Type:** `...*`\n**Description:** `Arguments for the function.`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=setTimeout");
         break;
       case "sweepMessages":
-        docChannel.send("");
+        docChannel.send("`.sweepMessages([lifetime])`\n```ini\nSweeps all text-based channels\' messages and removes the ones older than the max message lifetime. If the message has been edited, the time of the edit is used rather than the time of the original message.\n\nReturns: [ number ]\n\nAmount of messages that were removed from the caches, or -1 if the message cache lifetime is unlimited```\n**Parameter:** `lifetime`\n**Type:** `number`\n**Optional:** `TRUE`\n**Default:** `this.options.messageCacheLifetime`\n**Description:** Messages that are older than this (in seconds) will be removed from the caches. The default is based on ClientOptions#messageCacheLifetime```\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=sweepMessages");
         break;
       case "syncGuilds":
-        docChannel.send("");
+        docChannel.send("`.syncGuilds([guilds])`\n```ini\nRequests a sync of guild data with Discord.\nReturns: [ void ]```\n```ini\n[ This can be done automatically every 30 seconds by enabling ClientOptions#sync ]```\n```diff\n- This is only available when using a user account. -```\n\n**Parameter:** `guilds`\n**Type:** `Array<Guild> or Collection<Snowflake, Guild>`\n**Optional:** `TRUE`\n**Default:** `this.guilds`\n**Description:** `An array or collection of guilds to sync.`\n\n**Doc link:** https://discord.js.org/#/docs/main/stable/class/Client?scrollTo=syncGuilds");
         break;
 
       // Events
