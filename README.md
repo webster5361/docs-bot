@@ -27,6 +27,36 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 - MessageEmbedProvider
 - MessageEmbedThumbnail
 - MessageEmbedVideo
+- MessageMentions
+- MessageReaction
+- OAuth2Application
+- PartialGuild
+- PartialGuildChannel
+- PermissionOverwrites
+- Permissions
+- Presence
+- ReactionCollector
+- ReactionEmoji
+- RichEmbed
+- Role
+- Shard
+- ShardClientUtil
+- ShardingManager
+- SnowflakeUtil
+- StreamDispatcher
+- TextChannel
+- User
+- UserConnection
+- UserProfile
+- Util
+- VoiceBroadcast
+- VoiceChannel
+- VoiceConnection
+- VoiceReceiver
+- VoiceRegion
+- VolumeInterface
+- Webhook
+- WebhookClient
 
 ## COMPLETED -- Not Verified
 - Client
