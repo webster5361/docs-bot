@@ -9,7 +9,6 @@
 This is a reference bot for Discord.js documentation. Currently we are only supporting the STABLE branch of docs.
 
 ## IN PROGRESS
-- DMChannel
 - GroupDMChannel
 
 ## COMPLETED -- Not Verified
@@ -20,6 +19,7 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 - Collection
 - Collector
 - DiscordAPIError
+- DMChannel
 - Emoji
 - EvaluatedPermissions
 - Game
