@@ -10,6 +10,23 @@ This is a reference bot for Discord.js documentation. Currently we are only supp
 
 ## IN PROGRESS
 - GroupDMChannel
+- Guild
+- GuildAuditLogs
+- GuildAuditLogsEntry
+- GuildChannel
+- GuildMember
+- Invite
+- Message
+- MessageAttachment
+- MessageCollector
+- MessageEmbed
+- MessageEmbedAuthor
+- MessageEmbedField
+- MessageEmbedFooter
+- MessageEmbedImage
+- MessageEmbedProvider
+- MessageEmbedThumbnail
+- MessageEmbedVideo
 
 ## COMPLETED -- Not Verified
 - Client
