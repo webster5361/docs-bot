@@ -2,3 +2,5 @@ language: node_js
 node_js:
   - "7"
 install: npm install
+notifications:
+  webhooks: https://discordapp.com/api/webhooks/336309045684338698/anslcBHwa7DtFe07qerUd6lVQ1kLN3G3Mlixj92rp-g0iwQUHK6FKduhhMYTuNsWWGI_
