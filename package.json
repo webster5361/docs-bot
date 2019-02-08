@@ -13,7 +13,7 @@
     "discord.js": "^11.1.0",
     "moment": "^2.18.1",
     "ms": "^2.0.0",
-    "nodemon": "^1.11.0",
+    "nodemon": "^1.18.10",
     "return-deep-diff": "^0.2.7"
   }
 }
